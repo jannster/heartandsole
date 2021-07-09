@@ -3,8 +3,10 @@ from heartandsole.core.fields.base import ActivityField
 
 
 def semicircles_to_degrees(semicircles):
-  return semicircles * 180 / 2 ** 31
-
+  if semicircles is None: 
+    return 0
+  else
+    return semicircles * 180 / 2 ** 31
 
 class PositionField(ActivityField):
 
